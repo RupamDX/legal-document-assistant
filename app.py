@@ -12,11 +12,17 @@ import subprocess
 
 
 # Ensure spaCy model is installed and loaded
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
-    nlp = spacy.load("en_core_web_sm")
+def load_spacy_model():
+    try:
+        # Try to load the model
+        return spacy.load("en_core_web_sm")
+    except OSError:
+        # If the model is not installed, install it
+        subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+        return spacy.load("en_core_web_sm")
+
+# Load the spaCy model
+nlp = load_spacy_model()
 
 
 # Load SentenceTransformer Embedding Model
