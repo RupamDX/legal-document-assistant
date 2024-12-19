@@ -1,9 +1,9 @@
-# Upgrade build tools first to ensure stable installations
+# Upgrade build tools first
 pip==24.3.1
 wheel
 setuptools
 
-# Your required packages (version pinned or left as-is if known stable)
+# Your required packages
 streamlit==1.31.0
 langchain==0.1.0
 langchain-community==0.0.16
@@ -14,11 +14,11 @@ openai==1.12.0
 pypdf==3.17.1
 python-dotenv==1.0.0
 transformers==4.37.2
-torch==2.0.1
-accelerate==0.20.3
+torch==2.4.1           # Use one of the available torch versions
+accelerate==0.26.1
 
-# Use a stable spaCy version with known available wheels
+# Use a stable spaCy version with available wheels
 spacy==3.4.1
 
-# Add a known available en_core_web_sm model wheel for spaCy 3.4.x
+# Corresponding en_core_web_sm model for spaCy 3.4.x
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.0/en_core_web_sm-3.4.0-py3-none-any.whl
