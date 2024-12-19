@@ -10,13 +10,14 @@ import os
 import spacy
 import subprocess
 
-# Ensure spaCy model is available
+
+# Ensure spaCy model is installed and loaded
 try:
-    nlp = spacy.load('en_core_web_sm')
+    nlp = spacy.load("en_core_web_sm")
 except OSError:
-    import subprocess
     subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
-    nlp = spacy.load('en_core_web_sm')
+    nlp = spacy.load("en_core_web_sm")
+
 
 # Load SentenceTransformer Embedding Model
 embedding_model = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
