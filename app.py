@@ -61,7 +61,7 @@ if uploaded_file is not None:
         vector_store = process_and_store_embeddings(documents)
 
     # Step 3: Create a Q&A Chain
-   def create_qa_chain(vector_store):
+    def create_qa_chain(vector_store):
     """Create a Q&A chain with GPT-3.5 Turbo and FAISS retriever."""
     llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.0)  # Use ChatOpenAI
     retriever = vector_store.as_retriever()
