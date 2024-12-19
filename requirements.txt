@@ -1,16 +1,26 @@
+# Core dependencies
 streamlit==1.31.1
-python-dotenv==1.0.1
 langchain==0.1.9
 langchain-community==0.0.24
 langchain-openai==0.0.7
 openai==1.12.0
-faiss-cpu==1.7.4
-sentence-transformers==2.2.2
+
+# Document processing
 pypdf==3.17.4
-spacy==3.6.0
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.6.0/en_core_web_sm-3.6.0-py3-none-any.whl
-torch==2.1.0
+faiss-cpu==1.7.4
+
+# NLP and embeddings
+spacy==3.5.3
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl
+sentence-transformers==2.2.2
+
+# Machine learning dependencies
+torch==2.0.1
 transformers==4.37.2
 accelerate==0.26.1
-thinc==8.1.12
+
+# Required for spaCy
 numpy==1.24.3
+thinc==8.1.12
+cymem==2.0.7
+preshed==3.0.8
