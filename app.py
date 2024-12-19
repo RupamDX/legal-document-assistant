@@ -3,7 +3,7 @@ import streamlit as st
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.embeddings import SentenceTransformerEmbeddings
 from langchain.vectorstores import FAISS
-from langchain_openai import OpenAI
+from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import spacy
@@ -62,11 +62,12 @@ if uploaded_file is not None:
 
     # Step 3: Create a Q&A Chain
     def create_qa_chain(vector_store):
-        """Create a Q&A chain with GPT-3.5 and FAISS retriever."""
-        llm = OpenAI(model="gpt-3.5-turbo", temperature=0.0)
-        retriever = vector_store.as_retriever()
-        qa_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever)
-        return qa_chain
+    """Create a Q&A chain with GPT-3.5 Turbo and FAISS retriever."""
+    llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.0)  # Use ChatOpenAI
+    retriever = vector_store.as_retriever()
+    qa_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever)
+    return qa_chain
+
 
     qa_chain = create_qa_chain(vector_store)
 
