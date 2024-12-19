@@ -1,10 +1,8 @@
 # Core packages
 streamlit==1.31.1
 openai==1.12.0
-sentence-transformers
 
 # LangChain packages
-
 langchain==0.1.9
 langchain-community==0.0.24
 langchain-openai==0.0.7
@@ -14,7 +12,8 @@ pypdf==3.17.4
 
 # Vector storage and embeddings
 sentence-transformers==2.2.2
-
+transformers>=4.31.0
+torch>=2.0.0
 
 # Alternative to spaCy for NER (pure Python implementation)
 nltk==3.8.1
