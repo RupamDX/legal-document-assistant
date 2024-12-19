@@ -69,6 +69,7 @@ if uploaded_file is not None:
     return qa_chain
 
 
+
     qa_chain = create_qa_chain(vector_store)
 
     # Step 4: Interactive Q&A
