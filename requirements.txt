@@ -1,7 +1,7 @@
 # Core packages
 streamlit==1.31.1
 openai==1.12.0
-sentence-transformers>=2.2.2
+sentence-transformers
 
 # LangChain packages
 
