@@ -9,18 +9,14 @@ openai==1.12.0
 pypdf==3.17.4
 faiss-cpu==1.7.4
 
-# NLP and embeddings
-spacy==3.5.3
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl
+# Embeddings and transformers
 sentence-transformers==2.2.2
-
-# Machine learning dependencies
-torch==2.0.1
 transformers==4.37.2
-accelerate==0.26.1
 
-# Required for spaCy
+# Basic dependencies
 numpy==1.24.3
-thinc==8.1.12
-cymem==2.0.7
-preshed==3.0.8
+torch==2.0.1
+
+# Use older spaCy with pre-built wheel
+spacy==3.4.4
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.0/en_core_web_sm-3.4.0-py3-none-any.whl
