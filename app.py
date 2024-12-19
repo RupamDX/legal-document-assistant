@@ -7,6 +7,8 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import spacy
 import os
+import spacy
+import subprocess
 
 # Ensure spaCy model is available
 try:
