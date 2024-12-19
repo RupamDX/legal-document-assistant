@@ -12,7 +12,8 @@ pypdf==3.17.4
 
 # Vector storage and embeddings
 sentence-transformers==2.2.2
-faiss-cpu==1.7.4
+
 
 # Alternative to spaCy for NER (pure Python implementation)
 nltk==3.8.1
+chromadb
